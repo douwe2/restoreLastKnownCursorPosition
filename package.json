@@ -1,6 +1,6 @@
 {
-  "name": "helloworld",
-  "displayName": "HelloWorld",
+  "name": "lastknowncursorpos",
+  "displayName": "restore last known cursor position",
   "description": "",
   "version": "0.0.1",
   "engines": {
@@ -14,15 +14,7 @@
     "onDidOpenTextDocument"
   ],
   "main": "./out/extension.js",
-  "contributes": {
-    "commands": [
-      {
-        "command": "helloworld.helloWorld",
-        "title": "Hello World"
-      }
-    ]
-  },
-  "scripts": {
+    "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
@@ -42,5 +34,10 @@
     "mocha": "^10.1.0",
     "typescript": "^4.8.4",
     "@vscode/test-electron": "^2.2.0"
+  },
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/douwe2/restoreLastKnownCursorPosition.git"
   }
 }
+
