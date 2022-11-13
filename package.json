@@ -1,7 +1,8 @@
 {
   "name": "lastknowncursorpos",
   "displayName": "restore last known cursor position",
-  "description": "",
+  "description": "Restores last cursor position upon opening file",
+  "publisher":  "douwe2",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.73.0"
@@ -11,9 +12,23 @@
   ],
   "activationEvents": [
     "onDidChangeTextEditorSelection",
-    "onDidOpenTextDocument"
+    "onDidOpenTextDocument",
+    "onCommand:extension.restoreLastKnownCursorPosition"
   ],
   "main": "./out/extension.js",
+  "contributes": {
+    "commands": [{
+        "command": "extension.restoreLastKnownCursorPosition",
+        "title": "Restore Last Known Cursor Position"
+    }],
+    "keybindings": [
+      {
+          "command": "extension.restoreLastKnownCursorPosition",
+          "key": "ctrl+alt+c",
+          "mac": "shift+cmd+c"
+      }
+  ]    
+  },
     "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
@@ -38,6 +53,7 @@
   "repository": {
       "type": "git",
       "url": "https://github.com/douwe2/restoreLastKnownCursorPosition.git"
-  }
+  },
+  "license": "SEE LICENSE IN LICENSE.txt"
 }
 
